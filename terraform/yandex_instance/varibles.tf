@@ -1,5 +1,5 @@
 #-----------------------------------------------
-# VM CONFIG
+# INSTANCES VARIBLES
 #-----------------------------------------------
 variable "vm_configuration" {
   type = map(object({
@@ -41,11 +41,15 @@ variable "profiel_configuration" {
   }
 }
 
-#-----------------------------------------------
+
 variable "vm_user" {
   type = string
   default = "ubuntu"
 }
+
+#-----------------------------------------------
+# SSH
+#-----------------------------------------------
 
 variable "public_ssh_key_path" {
   type = string
@@ -55,6 +59,3 @@ variable "private_ssh_key_path" {
   type = string
 }
 
-variable "allowed_ports" {
-  type = list(string)
-}

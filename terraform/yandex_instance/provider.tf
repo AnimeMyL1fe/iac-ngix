@@ -5,14 +5,13 @@ terraform {
     }
   }
   required_version = ">= 0.13"
-
-    backend "s3" {
+  backend "s3" {
     endpoints = {
       s3 = "https://storage.yandexcloud.net"
     }
     bucket = "ya-prac-grishin"
     region = "ru-central1"
-    key    = "prac/network/terraform.tfstate"
+    key    = "prac/instance/terraform.tfstate"
 
     skip_region_validation      = true
     skip_credentials_validation = true

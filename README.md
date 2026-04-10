@@ -17,7 +17,7 @@ path_terraform_networks: директория, с описанием vps network
 path_ansible_dir: директория ансибла
 
 -----------
-Struktura
+Structure
 
 ├── README.md
 ├── ansible

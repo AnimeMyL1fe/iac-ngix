@@ -1,0 +1,32 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for proxy-nginx
+- name: install nginx
+  apt:
+   name: nginx
+   state: present
+   update_cache: yes
+
+- name: remove default config
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+
+- name: copy proxy config
+  template:
+    src: my-service.conf.j2
+    dest: /etc/nginx/sites-available/my-service.conf
+    mode: "0644"
+
+- name: add symlink
+  file:
+    src: /etc/nginx/sites-available/my-service.conf
+    path: /etc/nginx/sites-enabled/my-service.conf
+    state: link
+  notify: restart nginx
+
+- name: start nginx
+  service:
+    name: nginx
+    enabled: yes
+    state: started

@@ -1,0 +1,25 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for web-server-nginx
+- name: install nginx
+  apt:
+   name: nginx
+   state: present
+   update_cache: yes
+
+- name: remove default index.html
+  file:
+   path: /var/www/html/index.*
+   state: absent
+   
+- name: copy
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+  notify: restart nginx 
+
+- name: start nginx
+  service:
+    name: nginx
+    enabled: yes
+    state: started

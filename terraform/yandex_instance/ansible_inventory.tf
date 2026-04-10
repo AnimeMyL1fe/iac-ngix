@@ -5,7 +5,8 @@
 locals {
   get_vm_info = {
     for k,v in yandex_compute_instance.ubuntu : k=>{
-      ip = v.network_interface[0].nat_ip_address
+      public_ip     = v.network_interface[0].nat_ip_address
+      private_ip    = v.network_interface[0].ip_address
     }
   }
 }

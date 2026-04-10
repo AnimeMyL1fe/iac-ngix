@@ -17,6 +17,11 @@ resource "yandex_vpc_security_group" "sg1" {
     }
   }
   
+  ingress {
+    protocol       = "TCP"
+    description    = "Allowed port: 80"
+    v4_cidr_blocks = var.cidr_v4
+  }
 
   egress {
     description    = "Permit ANY"
@@ -24,3 +29,4 @@ resource "yandex_vpc_security_group" "sg1" {
     v4_cidr_blocks = ["0.0.0.0/0"]
   }
 }
+

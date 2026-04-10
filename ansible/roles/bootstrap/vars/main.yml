@@ -1,0 +1,10 @@
+#SPDX-License-Identifier: MIT-0
+---
+# vars file for bootstrap
+bootstrap_packages:
+  - dnsutils
+  - net-tools
+  - rsync 
+  - mc
+  - curl
+  - wget

@@ -1,0 +1,13 @@
+---
+- name: Base setup for all
+  hosts: all
+  roles: [bootstrap]
+
+- name: Setup backend
+  hosts: vm2  
+  roles: [web-server-nginx]
+
+- name: Setup proxy
+  hosts: vm1
+  roles: [proxy-nginx]
+

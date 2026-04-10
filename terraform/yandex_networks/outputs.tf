@@ -5,3 +5,4 @@ output "scg_id" {
 output "sub_id" {
   value = yandex_vpc_subnet.sub1.id
 }
+

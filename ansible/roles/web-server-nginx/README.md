@@ -1,17 +1,14 @@
 web-server-nginx
 =========
-
-Установка, замена index.html Nginx
+Установка Nginx, замена index.html 
 
 Role Variables
 --------------
 template:
-- index.html.j2: 
-
+- index.html.j2: кастомный index.html
 
 License
 -------
-
 MIT-0
 
 Author Information

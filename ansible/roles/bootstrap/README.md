@@ -1,14 +1,11 @@
 bootsstrap
 =========
-
 Установка пакетов.
-
 
 Role Variables
 --------------
 vars:
 - bootstrap_packages: список пакетов
-
 
 License
 -------

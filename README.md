@@ -1,12 +1,12 @@
 -----------
 Quick start
+* заранее подготовить S3 bucket 
 
 1. Настроить переменные в yandex_export.sh
 2. source yandex_export.sh
 3. sudo chmod +x pipeline.sh
 4. ./pipeline.sh
 
-* заранее подготовить S3 bucket 
 
 -----------
 varibles pipeline
@@ -95,8 +95,8 @@ Terraform
     ├── subnet.tf
     └── varibles.tf
 ```
--
-Краткое описание
+
+Краткое описание:
 
 yandex_instance: поднятия compute cloud инстансов
 yandex_networks: поднятие облачной сети (subnet, security_group)
@@ -119,8 +119,7 @@ Ansible
     ├── proxy-nginx
     └── web-server-nginx
 ```
--
-Краткое описание ролей
+Краткое описание ролей:
 
 bootstrap:          установка пакетов
 proxy-nginx:        установка и конфигурация проксирующего Nginx

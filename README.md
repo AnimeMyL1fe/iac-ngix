@@ -1,24 +1,24 @@
 -----------
 Quick start
+* заранее подготовить S3 bucket 
 
 1. Настроить переменные в yandex_export.sh
 2. source yandex_export.sh
 3. sudo chmod +x pipeline.sh
 4. ./pipeline.sh
 
-* заранее подготовить S3 bucket 
 
 -----------
 varibles pipeline
-
-workdir: директория проекта
+```
+workdir:                 директория проекта
 path_terraform_instance: директория, с описанием тачек для  terraform
 path_terraform_networks: директория, с описанием vps networks для terraforms
-path_ansible_dir: директория ансибла
-
+path_ansible_dir:        директория ансибла
+```
 -----------
-Struktura
-
+Structure
+```
 ├── README.md
 ├── ansible
 │   ├── ansible.cfg
@@ -72,12 +72,12 @@ Struktura
 │       ├── subnet.tf
 │       └── varibles.tf
 └── yandex_export.sh
-
+```
 
 
 -----------
 Terraform
-
+```
 ├── yandex_instance
 │   ├── ansible_inventory.tf
 │   ├── data.tf
@@ -94,20 +94,20 @@ Terraform
     ├── security_group.tf
     ├── subnet.tf
     └── varibles.tf
+```
 
--
-Краткое описание
-
+Краткое описание:
+```
 yandex_instance: поднятия compute cloud инстансов
 yandex_networks: поднятие облачной сети (subnet, security_group)
-
+```
 
 -----------
 Хранение terraform.tfstate
 
 .tfstate хранится в S3 bucket (Яндекс Object Storage)
 
-
+```
 -----------
 Ansible
 
@@ -118,10 +118,10 @@ Ansible
     ├── bootstrap
     ├── proxy-nginx
     └── web-server-nginx
-
--
-Краткое описание ролей
-
+```
+Краткое описание ролей:
+```
 bootstrap:          установка пакетов
 proxy-nginx:        установка и конфигурация проксирующего Nginx
 web-server-nginx:   установка и конфигурация принимающего Nginx  
+```

@@ -11,10 +11,10 @@ Quick start
 -----------
 varibles pipeline
 ```
-workdir: директория проекта
+workdir:                 директория проекта
 path_terraform_instance: директория, с описанием тачек для  terraform
 path_terraform_networks: директория, с описанием vps networks для terraforms
-path_ansible_dir: директория ансибла
+path_ansible_dir:        директория ансибла
 ```
 -----------
 Structure
@@ -97,10 +97,10 @@ Terraform
 ```
 
 Краткое описание:
-
+```
 yandex_instance: поднятия compute cloud инстансов
 yandex_networks: поднятие облачной сети (subnet, security_group)
-
+```
 
 -----------
 Хранение terraform.tfstate
@@ -120,7 +120,8 @@ Ansible
     └── web-server-nginx
 ```
 Краткое описание ролей:
-
+```
 bootstrap:          установка пакетов
 proxy-nginx:        установка и конфигурация проксирующего Nginx
 web-server-nginx:   установка и конфигурация принимающего Nginx  
+```

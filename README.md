@@ -18,7 +18,7 @@ path_ansible_dir: директория ансибла
 
 -----------
 Structure
-
+```
 ├── README.md
 ├── ansible
 │   ├── ansible.cfg
@@ -72,12 +72,12 @@ Structure
 │       ├── subnet.tf
 │       └── varibles.tf
 └── yandex_export.sh
-
+```
 
 
 -----------
 Terraform
-
+```
 ├── yandex_instance
 │   ├── ansible_inventory.tf
 │   ├── data.tf
@@ -94,7 +94,7 @@ Terraform
     ├── security_group.tf
     ├── subnet.tf
     └── varibles.tf
-
+```
 -
 Краткое описание
 
@@ -107,7 +107,7 @@ yandex_networks: поднятие облачной сети (subnet, security_gr
 
 .tfstate хранится в S3 bucket (Яндекс Object Storage)
 
-
+```
 -----------
 Ansible
 
@@ -118,7 +118,7 @@ Ansible
     ├── bootstrap
     ├── proxy-nginx
     └── web-server-nginx
-
+```
 -
 Краткое описание ролей
 

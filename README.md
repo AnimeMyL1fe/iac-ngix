@@ -1,8 +1,8 @@
 -----------
 Quick start
-* заранее подготовить S3 bucket 
+* заранее подготовить S3 bucket (https://yandex.cloud/en/docs/tutorials/infrastructure-management/terraform-state-storage#create-service-account)
 
-1. Настроить переменные в yandex_export.sh
+1. Настроить переменные
 2. source yandex_export.sh
 3. sudo chmod +x pipeline.sh
 4. ./pipeline.sh
